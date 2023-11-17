@@ -4,20 +4,22 @@ using namespace std;
 int main()
 {
 	setlocale(0, "");
-	cout << " Введите диапазон:" << endl;
-	int diap;
-	cin >> diap;
+	int sum = 0;
+	cout << "Введите начало диапазона:" << endl;
+	int nachdiap;
+	cin >> nachdiap;
+	cout << "Введите окончание диапазона:" << endl;
+	int enddiap;
+	cin >> enddiap;
 	cout << " " << endl;
-	int number = -1;
-	while ( number <= diap) {
-		if (number % 2 == 0) {
-			cout << number << endl;
-			number++;
+	for (int i = nachdiap; i <= enddiap; i++) {
+		if (i % 2 == 0) {
+			
+			sum += i;
 		}
-		else {
-			number++;
-		}
+		
 	}
+	cout <<"Сумма всех четных чисел в заданном диапозоне равна " << sum << endl;
 }
 
 
